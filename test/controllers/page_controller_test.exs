@@ -3,6 +3,6 @@ defmodule PhoenixEnvSettings.PageControllerTest do
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"
-    assert html_response(conn, 200) =~ "Welcome to New and Improved Phoenix!"
+    assert html_response(conn, 200) =~ "Welcome to Super Duper Improved Phoenix!"
   end
 end
