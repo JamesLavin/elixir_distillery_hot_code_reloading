@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+# PostgreSQL `mix ecto.create` equivalent
+psql -c "CREATE USER ${DB_USER} WITH PASSWORD '${DB_PASSWORD}';" &&
+createdb "${DB_NAME}" &&
+psql -c "GRANT ALL PRIVILEGES ON DATABASE ${DB_NAME} to ${DB_USER};" &&
+echo "The database '${DB_NAME}' and role '${DB_USER}' have been created."

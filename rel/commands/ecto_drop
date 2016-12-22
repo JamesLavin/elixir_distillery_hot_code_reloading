@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+# PostgreSQL `mix ecto.drop` equivalent
+dropdb "${DB_NAME}" &&
+dropuser "${DB_USER}" &&
+echo "The database '${DB_NAME}' and role '${DB_USER}' have been dropped."
